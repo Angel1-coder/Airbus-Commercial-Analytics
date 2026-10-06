@@ -1,0 +1,17 @@
+__pycache__/
+.venv/
+*.pyc
+desktop.ini
+_inventory.txt
+_schema_sample.txt
+_*.py
+_*.png
+*.pbix
+orders_and_deliveries_2025.zip
+Thumbs.db
+.DS_Store
+dashboards/CHEAT_ROAS_ROI.md
+dashboards/airbus_dashboard_mockup*.html
+dashboards/save_aircraft_icons.py
+data/processed/data_quality_report.json
+data/processed/file_inventory.csv

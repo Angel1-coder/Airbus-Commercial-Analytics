@@ -1,0 +1,32 @@
+Sell-in =
+CALCULATE(
+    SUM(fact_fleet_snapshot[units]),
+    fact_fleet_snapshot[metric] = "Ord"
+)
+
+Sell-out =
+CALCULATE(
+    SUM(fact_fleet_snapshot[units]),
+    fact_fleet_snapshot[metric] = "Del"
+)
+
+Forecast =
+[Sell-in] - [Sell-out]
+
+Delivery Rate =
+DIVIDE([Sell-out], [Sell-in])
+
+Event Units =
+SUM(fact_orders_deliveries[units])
+
+Spend =
+SUM(roas_lab[spend_eur])
+
+Umsatz Ads =
+SUM(roas_lab[umsatz_eur])
+
+ROAS =
+DIVIDE([Umsatz Ads], [Spend])
+
+ROI =
+DIVIDE([Umsatz Ads] - [Spend], [Spend])
