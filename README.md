@@ -1,6 +1,6 @@
-# Airbus Orders & Deliveries
+# Airbus Commercial Analytics
 
-Öffentliche Airbus-Monatsreports zu Bestellungen und Auslieferungen.
+Datengrundlage: öffentliche Airbus-Monatsreports **Orders & Deliveries**.
 Januar 2021 bis Juli 2026, 67 Excel-Dateien von der [Airbus-Seite](https://www.airbus.com/en/products-services/commercial-aircraft/orders-and-deliveries).
 
 Daraus ein Power-BI-Dashboard. Python bereinigt die Dateien, SQL rechnet die KPIs, Power BI zeigt Sell-in, Sell-out und Forecast nach Flugzeugfamilie und Land.

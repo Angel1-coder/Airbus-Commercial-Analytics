@@ -15,3 +15,4 @@ dashboards/airbus_dashboard_mockup*.html
 dashboards/save_aircraft_icons.py
 data/processed/data_quality_report.json
 data/processed/file_inventory.csv
+data/processed/roas_lab.csv
