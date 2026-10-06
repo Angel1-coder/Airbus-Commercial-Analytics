@@ -454,6 +454,8 @@ def main() -> None:
     fact_events = events.copy()
     if len(fact_events):
         fact_events["date_key"] = fact_events["event_date"].dt.strftime("%Y%m%d").astype(int)
+        # "7.0" is read as 70 by Power BI with German locale
+        fact_events["units"] = fact_events["units"].astype(int)
 
     fact_fleet = fleet.copy()
     fact_events.to_csv(PROCESSED / "fact_orders_deliveries.csv", index=False)
