@@ -3,7 +3,7 @@
 Datengrundlage: öffentliche Airbus-Monatsreports **Orders & Deliveries**.
 Januar 2021 bis Juli 2026, 67 Excel-Dateien von der [Airbus-Seite](https://www.airbus.com/en/products-services/commercial-aircraft/orders-and-deliveries).
 
-Daraus ein Power-BI-Dashboard. Python bereinigt die Dateien, SQL rechnet die KPIs, Power BI zeigt Sell-in, Sell-out und Forecast nach Flugzeugfamilie und Land.
+Daraus ein Power-BI-Dashboard. Python bereinigt die Dateien, SQL rechnet die KPIs, Power BI zeigt Sell-in, Sell-out und Backlog nach Flugzeugfamilie und Land.
 
 ![Airbus Commercial Analytics](dashboards/airbus-commercial-analytics.png)
 
@@ -11,9 +11,11 @@ Daraus ein Power-BI-Dashboard. Python bereinigt die Dateien, SQL rechnet die KPI
 
 Im Dashboard die Sprache vom Business, in den Quelldateien die Airbus-Begriffe:
 
-- **Sell-in 26.534** = Orders, also Auftragseingang über die Laufzeit
+Gesamtstand Juli 2026 seit Programmstart:
+
+- **Sell-in 26.534** = Orders, also Auftragseingang
 - **Sell-out 17.176** = Deliveries, also ausgelieferte Flugzeuge
-- **Forecast 9.358** = der Restbestand (Orders minus Deliveries), bei Airbus Backlog genannt
+- **Backlog 9.358** = Auftragsbestand (Orders minus Deliveries), bestellt und noch nicht ausgeliefert
 
 A320 Family hat den größten offenen Bestand. A340, A380 und A300/A310 sind durch (Sell-in = Sell-out).
 
@@ -38,5 +40,5 @@ Die fertigen CSVs sind im Repo. Python muss man nur neu laufen lassen, wenn eine
 ## Technik
 
 - **Python / pandas:** Dateien finden, Typen vereinheitlichen, wide → long
-- **SQL:** Sell-in, Sell-out, Forecast, Top-Kunden, Jahr zu Jahr
+- **SQL:** Sell-in, Sell-out, Backlog, Top-Kunden, Jahr zu Jahr
 - **Power BI:** Sternschema (Fact + Dimensionen), DAX, Karte, Zeitreihe

@@ -8,7 +8,7 @@ python 01_python_data_cleaning.py
 
 Danach in Power BI Desktop nur Dateien aus `data/processed/` laden, nicht die Original-Excels.
 
-Stand Juli 2026 zum Gegenprüfen: Sell-in 26.534 | Sell-out 17.176 | Forecast 9.358
+Stand Juli 2026 zum Gegenprüfen: Sell-in 26.534 | Sell-out 17.176 | Backlog 9.358
 
 ## 1. Dateien laden
 
@@ -57,7 +57,7 @@ CALCULATE(
     fact_fleet_snapshot[metric] = "Del"
 )
 
-Forecast =
+Backlog =
 [Sell-in] - [Sell-out]
 
 Event Units =
@@ -68,9 +68,9 @@ SUM(fact_orders_deliveries[units])
 
 So wie im Screenshot:
 
-- drei Kacheln: Sell-in, Sell-out, Forecast
-- Tabelle: Familie mit Sell-in / Sell-out / Forecast
-- Balken: Forecast nach Familie
+- drei Kacheln: Sell-in, Sell-out, Backlog
+- Tabelle: Familie mit Sell-in / Sell-out / Backlog
+- Balken: Backlog nach Familie
 - Linie: Orders vs Deliveries nach Jahr (`event_type`)
 - Karte: Sell-out nach Land
 

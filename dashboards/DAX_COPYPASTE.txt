@@ -10,7 +10,7 @@ CALCULATE(
     fact_fleet_snapshot[metric] = "Del"
 )
 
-Forecast =
+Backlog =
 [Sell-in] - [Sell-out]
 
 Delivery Rate =
